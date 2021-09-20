@@ -1,0 +1,20 @@
+ /* xhr.addEventListener("readystatechange",(e)=>{
+        if(xhr.readyState !== 4) return;
+        if(xhr.status>=200 && xhr.status<300){
+            console.log(xhr);
+            console.log("Succesfull");
+            let json = JSON.parse(xhr.responseText);
+            json.forEach(el=> {
+                const $li = document.createElement("li");
+                $li.innerHTML = `${el.name}`
+                $fragment.appendChild($li)
+            });
+            $xhr.appendChild($fragment)
+        }else{
+            console.log("Error")
+            let message = xhr.statusText || "Error";
+            $xhr.innerHTML = `Error ${xhr.status}: ${message}`
+        }
+    })
+    xhr.open("GET","https://restcountries.eu/rest/v2/all")
+    xhr.send(); */
